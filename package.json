@@ -1,0 +1,50 @@
+{
+  "name": "zabo-connect-utils",
+  "version": "0.1.0",
+  "description": "A collection of utils for the Zabo connect components.",
+  "main": "./lib/index.js",
+  "scripts": {
+    "prepublishOnly": "npm run build",
+    "build": "NODE_ENV=production babel src --out-dir lib",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "standardize": "standard --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zabo-api/zabo-connect-utils.git"
+  },
+  "keywords": [
+    "library",
+    "utils",
+    "components"
+  ],
+  "author": "Zabo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zabo-api/zabo-connect-utils/issues"
+  },
+  "homepage": "https://github.com/zabo-api/zabo-connect-utils#readme",
+  "dependencies": {
+    "bip32": "^1.0.4",
+    "bip32-path": "^0.4.2",
+    "bitcoinjs-lib": "^5.1.8"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-react": "^7.8.3"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "standard": {
+    "ignore": [
+      "lib"
+    ]
+  },
+  "files": [
+    "lib",
+    "README.md"
+  ]
+}
