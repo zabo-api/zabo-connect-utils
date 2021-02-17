@@ -11,18 +11,13 @@ function formatResponse (data, resp = {}) {
   if (Array.isArray(resp)) {
     const credentials = {}
 
-    resp = resp.map(credential => ({
-      ...credential,
-      internal: true
-    }))
-
     requiredCredentials.concat(resp).forEach(credential => {
       const value = userInput[credential.name]
+
       credentials[credential.name] = {
         ...credential,
-        input: value
-          ? { type: 'hidden', value }
-          : credential.input
+        internal: !requiredCredentials.find(c => c.name === credential.name),
+        input: value ? { type: 'hidden', value } : credential.input
       }
     })
 
