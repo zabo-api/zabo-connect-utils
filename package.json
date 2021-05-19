@@ -1,6 +1,6 @@
 {
   "name": "zabo-connect-utils",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "A collection of utils for the Zabo connect components.",
   "main": "./lib/index.js",
   "scripts": {
