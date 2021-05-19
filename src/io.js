@@ -16,7 +16,7 @@ function formatResponse (data, resp = {}) {
 
       credentials[credential.name] = {
         ...credential,
-        internal: !requiredCredentials.find(c => c.name === credential.name),
+        internal: credential.internal || !requiredCredentials.find(c => c.name === credential.name),
         input: value ? { type: 'hidden', value } : credential.input
       }
     })
